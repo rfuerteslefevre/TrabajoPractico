@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="grouper_io">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/grouper_io.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
