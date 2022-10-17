@@ -35,7 +35,32 @@
         </header>
         <main class="contenido">
              <!-- Section Inicio -->
-        <section id="Inicio">
+        <!-- Section Grupos Aleatorios -->
+        <section id="Grupos Aleatorios">
+            <h2>Groupers aleatorios</h2>
+            <h3>El algoritmo de los grupos</h3>
+    
+            <p> Simplemente pegá la lista de participantes y la cantidad de grupos a generar:</p>
+            <br>
+            <form action="">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+    
+                    <label for="grupos">Número de grupos a generar: </label>
+                    <input type="text" id="grupos" name="Cantidad de Grupos" placeholder="Escribí un número mayor a 0">
+            <!-- Poner que sea mayor a 0 -->
+                    <br>
+                    <label for="lista1">Lista de participantes: </label>
+                    <br>
+                    <textarea cols="50" rows="5" placeholder="Pegá tu lista de participantes separados por ';'"></textarea>
+                    <br>
+                    <input type="submit" class="botones" value="Formar grupos">
+                    <input type="reset" value="Reset">
+                </fieldset>
+         </section>
+        </br>
+        
+             <section id="Inicio">
             <h1>Grouper</h1>
             <h3>El algoritmo de los grupos</h3>
 
@@ -52,32 +77,8 @@
         
              </section>
 
-        <br><br>
-        <!-- Section Grupos Aleatorios -->
-        <section id="Grupos Aleatorios">
-            <h2>Groupers aleatorios</h2>
-            <h3>El algoritmo de los grupos</h3>
+        <br><hr><br>
     
-            <p> Simplemente pegá la lista de participantes y la cantidad de grupos a generar:</p>
-            <br>
-            <form action="">
-                <fieldset class="sombreado">
-                    <legend>Datos Personales</legend>
-    
-                    <label for="grupos">Número de grupos a generar: </label>
-                    <input type="text" id="grupos" name="Cantidad de Grupos" placeholder="Escribí un número mayor a 0">
-            <!-- Poner que sea mayor a 0 -->
-                    <br>
-                    <label for="lista1">Lista de participantes: </label>
-                    <br>
-                    <textarea cols="50" rows="5" placeholder="Pegá tu lista de participantes separados por ';'"></textarea>
-                    <br>
-                    <input type="submit" value="Formar grupos">
-                    <input type="reset" value="Reset">
-                </fieldset>
-         </section>
-
-         <br><br>
         <!-- Section Grupos con Filtros -->
         <section id="Grupos con Filtros">
             <h2>Groupers con condiciones</h2>
@@ -133,6 +134,9 @@
         </div>
         <div class="widget-2">
             <h3>WIDGET-2</h3>
+        </div>
+        <div class="widget-3">
+            <h3>WIDGET-3</h3>
         </div>
             <footer class="pie">
                 <section id="contacto"></section>
