@@ -127,6 +127,10 @@ body{
     color: #fefefe;
  }
   
+.sombreado {
+    box-shadow: 6px 8px 28px 0px rgba(0,0,0,0.36);
+}
+
   .pie .social-footer-icons .fa:hover {
     color: #4a4a4a;
     transition: color 0.3s ease-in;
