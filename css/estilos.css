@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background: rgb(230,230,230);
+    background: #FFDDD2;
     color: #000;
     font-family: 'Roboto', sans-serif;
 }
@@ -37,7 +37,7 @@ body{
 }
 
 .contenedor .encabezado{
-    background: darkblue;
+    background: #006D77;
     color: #fff;
     grid-area: encabezado; 
 }
@@ -48,7 +48,7 @@ body{
 }
 
 .contenedor .sidebar{
-    background: orange;
+    background: #E29578;
     /*utilizamos flexbox para alinear el contenido*/
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@ body{
 
 .contenedor .widget-1,
 .contenedor .widget-2{
-    background: lightskyblue;
+    background: #83C5BE;
     color: #000;
     height: 100px;
     /*utilizamos flexbox para alinear el contenido*/
@@ -76,8 +76,8 @@ body{
 }
 
 .contenedor .pie{
-    background: lightblue;
-    color: #fff;
+    background: #006D77;
+    color: #333;
     grid-area: pie; 
 }
 
@@ -124,11 +124,11 @@ body{
   
   .pie .social-footer-icons .fa {
     font-size: 1.3rem;
-    color: #fefefe;
+    color: #333;
  }
   
   .pie .social-footer-icons .fa:hover {
-    color: #4a4a4a;
+    color: #339;
     transition: color 0.3s ease-in;
   }
   
