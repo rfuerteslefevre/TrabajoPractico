@@ -1,45 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Roboto:wght@300&family=Silkscreen&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link 
-        rel="icon" 
-        sizes=""
-        href="img/grouper_logo.ico">
-
-    <!--Estilos CSS -->
-     <link rel="stylesheet" 
-     href="estilos.css" />
-     
-     
-     
-     <title>Grouper</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+        <!-- Favicon -->
+    <link rel="icon" sizes="" href="img/grouper_logo.ico">
+        <!--Estilos CSS -->
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Grouper</title>
 </head>
-
 <body>
-
-    <header>
-        <nav>
-            <!-- IMAGEN -->
-            <img src="img/logo.jpeg" alt="Logo" width="500px">
-            <br>
-            <a href="#Inicio">Inicio |</a>
-            <a href="#Cómo funciona">Cómo Funciona |</a>
-            <a href="Grupos Aleatorios">Grupos Aleatorios |</a>
-            <a href="Grupos con Filtros">Grupos con Filtros |</a>
-            <a href="contacto.html">Contacto </a>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Section Inicio -->
+    <div class="contenedor">
+        <header class="encabezado">
+            <h2>HEADER</h2>
+            <h1 class="headerH1">
+                <a href="#" class="headerA">Grouper</a>
+            </h1>
+            <nav class="headerNav">
+                <!-- IMAGEN -->
+                <img src="img/logo.jpeg" alt="Logo" width="100px">
+                <br>
+                <ul class="headerUl">
+                    <li class="headreLi"><a href="#Inicio">Inicio |</a></li>
+                    <li class="headreLi"><a href="#Cómo funciona">Cómo Funciona |</a></li>
+                    <li class="headreLi"><a href="Grupos Aleatorios">Grupos Aleatorios |</a></li>
+                    <li class="headreLi"><a href="Grupos con Filtros">Grupos con Filtros |</a></li>
+                    <li class="headreLi"><a href="contacto.html">Contacto </a></li>
+                </ul>
+                
+            </nav>
+        </header>
+        <main class="contenido">
+             <!-- Section Inicio -->
         <section id="Inicio">
             <h1>Grouper</h1>
             <h3>El algoritmo de los grupos</h3>
@@ -125,17 +121,35 @@
          </section>
          <br><br>
          <br><br>
-    <!-- Sección de redes sociales - Fijado a la derecha -->
-        <section id="contacto">
-            <h3>Nuestras Redes Sociales</h3>
-
-        <p> poner iconos de redes</p>
-
-     </section>
+    
     <!-- Vuelve al comienzo  -->
 
     <!-- Sección Footer  -->
-
-    </main>
-</body>
+        </main>
+        <aside class="sidebar">
+            <h3>SIDEBAR</h3>
+        </aside>
+        <div class="widget-1">
+            <h3>WIDGET-1</h3>
+        </div>
+        <div class="widget-2">
+            <h3>WIDGET-2</h3>
+        </div>
+            <footer class="pie">
+                <section id="contacto"></section>
+                    <div class="social-footer-left">
+                        <a href="#"><img class="logo" src="img/grouper_logo.ico"></a>
+                    </div>
+                    <div class="social-footer-icons">
+                        <ul class="menu simple">
+                            <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="false"></i></a></li>
+                            <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="false"></i></a></li>
+                            <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                            <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </section>
+            </footer>
+        </div>
+    </body>
 </html>
