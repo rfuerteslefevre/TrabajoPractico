@@ -2,15 +2,33 @@
     margin: 0;
     padding: 0;
 }
-body{
+.body{
     background: rgb(230,230,230);
     color: #000;
     font-family: 'Roboto', sans-serif;
 }
 
+.menu{
+    display: flex;
+    align-items: center;
+}
+.logo {
+    padding: 5px;
+  }
+.headerUl{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerNav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+}
 .contenedor{
-    width: 90%;
-    max-width: 1000px; /*ancho máximo de la página*/
+    width: 90%;    
     margin: 20px auto; /*auto permite centrar nuestra página en forma horizontal*/
     display: grid;
     gap: 20px; /*nos ahorramos tenes que poner márgenes entre los elementos*/
@@ -39,15 +57,27 @@ body{
 .contenedor .encabezado{
     background: darkblue;
     color: #fff;
-    grid-area: encabezado; 
+    grid-area: encabezado;
+    display: flex;
+  justify-content: space-between;
+  position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 70px;
+  
+ 
 }
 
 .contenedor .contenido{
     background: #fff;
     grid-area: contenido; 
+    margin-top: 50px;
 }
 
 .contenedor .sidebar{
+    margin-top: 50px;
     background: orange;
     /*utilizamos flexbox para alinear el contenido*/
     display: flex;
@@ -133,6 +163,8 @@ body{
   .pie .social-footer-icons .fa {
     font-size: 1.3rem;
     color: #fefefe;
+    padding: auto;
+    
  }
   
 .sombreado {
