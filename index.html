@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
         <!-- Favicon -->
     <link rel="icon" sizes="" href="img/grouper_logo.ico">
@@ -16,44 +15,30 @@
 <body>
     <div class="contenedor">
         <header class="encabezado">
-            <h2>HEADER</h2>
-            <h1 class="headerH1">
-                <a href="#" class="headerA">Grouper</a>
             </h1>
             <nav class="headerNav">
-                <!-- IMAGEN -->
-                <img src="img/logo.jpeg" alt="Logo" width="100px">
-                <br>
-                <ul class="headerUl">
-                    <li class="headreLi"><a href="#Inicio">Inicio |</a></li>
-                    <li class="headreLi"><a href="#Cómo funciona">Cómo Funciona |</a></li>
-                    <li class="headreLi"><a href="Grupos Aleatorios">Grupos Aleatorios |</a></li>
-                    <li class="headreLi"><a href="Grupos con Filtros">Grupos con Filtros |</a></li>
-                    <li class="headreLi"><a href="contacto.html">Contacto </a></li>
-                </ul>
+                <div class="headerUl">
                 
+                
+
+                        <div class="logo">
+                            <picture>
+                                <img src="img/logo.jpeg" alt="Logo" width="100px">
+                            </picture>
+                        </div>
+                        <div class="menu">
+                        <li class="headreLi"><a href="#Inicio">Inicio |</a></li>
+                        <li class="headreLi"><a href="#Cómo funciona">Cómo Funciona |</a></li>
+                        <li class="headreLi"><a href="Grupos Aleatorios">Grupos Aleatorios |</a></li>
+                        <li class="headreLi"><a href="Grupos con Filtros">Grupos con Filtros |</a></li>
+                        <li class="headreLi"><a href="contacto.html">Contacto </a></li>
+                        </div>    
+                
+                </div>
             </nav>
         </header>
         <main class="contenido">
              <!-- Section Inicio -->
-        <section id="Inicio">
-            <h1>Grouper</h1>
-            <h3>El algoritmo de los grupos</h3>
-
-            <p> El Generador de Grupos es una herramienta online y gratuita que te permitirá dividir una lista de participantes en grupos, seleccionando la cantidad de equipos o la cantidad de participantes por equipo.</p>
-
-        </section>
-
-        <!-- Section Cómo funciona -->
-            <section id="Cómo funciona">
-                <h2>How</h2>
-                <h3>El algoritmo de los grupos</h3>
-        
-                <p> Acá van los planteamientos a seguir</p>
-        
-             </section>
-
-        <br><br>
         <!-- Section Grupos Aleatorios -->
         <section id="Grupos Aleatorios">
             <h2>Groupers aleatorios</h2>
@@ -73,12 +58,31 @@
                     <br>
                     <textarea cols="50" rows="5" placeholder="Pegá tu lista de participantes separados por ';'"></textarea>
                     <br>
-                    <input type="submit" value="Formar grupos">
+                    <input type="submit" class="botones" value="Formar grupos">
                     <input type="reset" value="Reset">
                 </fieldset>
          </section>
+        </br>
+        
+             <section id="Inicio">
+            <h1>Grouper</h1>
+            <h3>El algoritmo de los grupos</h3>
 
-         <br><br>
+            <p> El Generador de Grupos es una herramienta online y gratuita que te permitirá dividir una lista de participantes en grupos, seleccionando la cantidad de equipos o la cantidad de participantes por equipo.</p>
+
+        </section>
+
+        <!-- Section Cómo funciona -->
+            <section id="Cómo funciona">
+                <h2>How</h2>
+                <h3>El algoritmo de los grupos</h3>
+        
+                <p> Acá van los planteamientos a seguir</p>
+        
+             </section>
+
+        <br><hr><br>
+    
         <!-- Section Grupos con Filtros -->
         <section id="Grupos con Filtros">
             <h2>Groupers con condiciones</h2>
@@ -134,6 +138,9 @@
         </div>
         <div class="widget-2">
             <h3>WIDGET-2</h3>
+        </div>
+        <div class="widget-3">
+            <h3>WIDGET-3</h3>
         </div>
             <footer class="pie">
                 <section id="contacto"></section>
