@@ -284,7 +284,7 @@ nav h1 {
 .widget-2 header,
 .widget-3 header{
   width: 100%;
-  height: 200px;
+  height: 250px;
   overflow: hidden;
   
   }
@@ -293,9 +293,14 @@ nav h1 {
   .widget-2 header img,
   .widget-3 header img{
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     display: block;
+    object-position: 100% 0%;
+  }
+
+  .widget-3 header img{
+    object-position: 100% 65%;
   }
 
 .widget-1 section,
