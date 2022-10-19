@@ -10,6 +10,7 @@
         <!--Estilos CSS -->
     <link rel="stylesheet" href="css/estilos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Grouper</title>
 </head>
 <body>
@@ -94,39 +95,28 @@
          <br><br>
         <!-- Section contacto -->
         <section id="contacto">
-            
-            <h2>Tenés dudas o comentarios?</h2>
-    
-            <p> Dejanos tus comentarios o preguntas aquí:</p>
-            
-            
-            <div class="mapa"><iframe  height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=obelisco&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
-            
-
-            <form action="">
-                <fieldset>
-                    <legend>Datos Personales</legend>
-    
-                    <label for="nombre">Nombre: </label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Escribí tu nombre">
-    
-                    <label for="apellido">Apellido: </label>
-                    <input type="text" id="apellido" name="apellido" size="10" maxlength="5" required>
-                    <br><br>
-                    <label for="Mail">Correo: </label>
-                    <input type="email">
-                    <br><br><br>
-                    <label for="comentarios">Dejá tus comentarios: </label>
-                    <br>
-                    <textarea cols="20" rows="2" placeholder="Escribí acá"></textarea>
-        
-                    <br><br>
-        
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Reset">
-                </fieldset>
-    
-         </section>
+            <h2>Contactanos</h2>
+           <div class="contenedorContacto">
+                
+                <div class="CajaContacto">
+                    <div class="izquierda">
+                        <h2>En nuestras oficinas comerciales</h2>
+                        <p>Av. 9 de Julio s/n, C1043 CABA, Argentina</p>
+                        <div class="mapa">
+                            <iframe  height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=obelisco&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+                    </div>
+                    <div class="derecha">
+                        <h2>Dejanos tus comentarios o preguntas aquí:</h2>
+                        <input type="text" class="field" placeholder="Escribí tu nombre">
+                        <input type="text" class="field" placeholder="Apellido">
+                        <input type="email" class="field" placeholder="e-mail">
+                        <textarea class="field area" placeholder="Mensaje"></textarea>
+                        <button class="btn">Enviar</button>
+                    </div>
+                </div>
+           </div> 
+        </section>
          <br><br>
          <br><br>
     
@@ -135,7 +125,19 @@
     <!-- Sección Footer  -->
         </main>
         <aside class="sidebar">
-            <h3>SIDEBAR</h3>
+            <input id="usuario" placeholder="Escribe 1 o 2 o 3">
+    <button onclick="buscar()">buscar</button>
+    
+    <!-- 3. crer la tabla en html -->
+    
+    <table id="respuesta">
+        <thead>
+          <th>Id</th>
+          <th>Nombre de Usuario</th>
+        </thead>
+        <tbody id="respuesta_body">
+        </tbody>
+    </table>
         </aside>
         <div class="widget-1">
             <header>
@@ -205,4 +207,33 @@
             </footer>
         </div>
     </body>
+    <script>
+
+        // 5. crear metodo buscar 
+        function buscar(){
+          
+          // 6. obtene el valor del <input id="usuario">
+          let usuario = $('#usuario').val()
+          
+          $.ajax({
+            
+            // 7. agrega el valor a la url
+            url: "https://jsonplaceholder.typicode.com/users/"+usuario
+          
+          }).done(function(data) {
+             
+             
+             // 8. construyes el <tr> con tus datos de respuesta
+             let tr = '<tr>'+
+                  '<td>' + data.id + '</td>' +
+                  '<td>' + data.email + '</td>' +
+                '</tr>'
+             console.log(tr) // *opcional para ver en consola
+             
+             // 9. usas append para agregar el tr al final
+             $('#respuesta_body').append(tr)
+          
+          });
+        }
+        </script>
 </html>

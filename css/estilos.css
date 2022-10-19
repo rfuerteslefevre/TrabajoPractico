@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Quicksand', sans-serif;
 }
 body{
     background: #FFDDD2;
@@ -12,6 +13,7 @@ body{
     display: flex;
     align-items: center;
     position: relative;
+    
 }
 .logo {
     padding: 5px;
@@ -88,7 +90,7 @@ body{
     background: #E29578;
     margin-top: 50px;
     /*utilizamos flexbox para alinear el contenido*/
-    display: flex;
+    
     align-items: center;
     justify-content: center;
     grid-area: sidebar; 
@@ -123,29 +125,7 @@ body{
     grid-area: pie; 
 }
 
-@media screen and (max-width: 768px){
-    .contenedor{
-        grid-template-areas: "encabezado encabezado encabezado"
-                             "contenido contenido contenido"
-                             "widget-1 widget-1 widget-1"
-                             "widget-2 widget-2 widget-2"
-                             "widget-3 widget-3 widget-3"
-                             "sidebar sidebar sidebar"
-                             "pie pie pie";
-    }
-}
 
-@media screen and (max-width: 450px){
-    .contenedor{
-        grid-template-areas: "encabezado encabezado encabezado"
-                             "contenido contenido contenido"
-                             "widget-1 widget-1 widget-1"
-                             "widget-2 widget-2 widget-2"
-                             "widget-3 widget-3 widget-3"
-                             "sidebar sidebar sidebar"
-                             "pie pie pie";
-    }
-}
 
 
 .pie {
@@ -207,8 +187,7 @@ h1{
 
 h2{
     font-family: 'Montserrat', sans-serif;
-    normal-font: 400;
-}
+    }
 
 h3{
     font-family: 'Montserrat', sans-serif;
@@ -307,7 +286,7 @@ nav h1 {
   width: 100%;
   height: 200px;
   overflow: hidden;
-  position: relative;
+  
   }
 
   .widget-1 header img,
@@ -367,5 +346,108 @@ nav h1 {
   margin: 10px;
 }
 
+.contenedorContacto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 100px;
+}
+
+
+.CajaContacto{
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.izquierda{
+  height: 100%;
+}
+
+.derecha{
+  padding: 25px 40px;
+}
+
+.CajaContacto h2{
+  
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+
+.field{
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 2px solid rgba(0,0,0,0);
+  background-color: rgba(230,230,230,0.6);
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  transition: .3s;
+ 
+}
+
+.field:hover{
+  background-color: rgba(0,0,0,0.1);
+
+}
+
+.field:focus{
+  background-color: #fff;
+  border: 2px solid rgba(30,85,250,0.5);
+}
+
+.area{min-height: 150px;}
+
+.btn{
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  background-color: #2ecc71;
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+
+}
+
+.btn:hover{
+  background-color: #2ecc71;
+}
+
+@media screen and (max-width: 768px){
+  .contenedor{
+      grid-template-areas: "encabezado encabezado encabezado"
+                           "contenido contenido contenido"
+                           "widget-1 widget-1 widget-1"
+                           "widget-2 widget-2 widget-2"
+                           "widget-3 widget-3 widget-3"
+                           "sidebar sidebar sidebar"
+                           "pie pie pie";
+  }
+  .CajaContacto{
+    grid-template-columns: 1fr;
+
+  }
+  
+}
+
+@media screen and (max-width: 450px){
+  .contenedor{
+      grid-template-areas: "encabezado encabezado encabezado"
+                           "contenido contenido contenido"
+                           "widget-1 widget-1 widget-1"
+                           "widget-2 widget-2 widget-2"
+                           "widget-3 widget-3 widget-3"
+                           "sidebar sidebar sidebar"
+                           "pie pie pie";
+  }
+}
 
   
