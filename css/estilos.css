@@ -48,13 +48,17 @@ body{
                          "pie pie pie pie";
 }
 
-.contenedor > div,
 .contenedor .encabezado,
-.contenedor .contenido,
 .contenedor .sidebar,
 .contenedor .pie {
+    padding: 20;
+    border-radius: 0px;
+}
+
+.contenedor > div,
+.contenedor .contenido{
     padding: 0;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .contenedor .encabezado{
