@@ -160,6 +160,11 @@ body {
   box-shadow: 6px 8px 28px 0px rgba(0, 0, 0, 0.36);
 }
 
+.fa:hover {
+  color: #339;
+  transition: color 0.3s ease-in;
+}
+
 .pie .social-footer-icons .fa:hover {
   color: #339;
   transition: color 0.3s ease-in;
@@ -308,6 +313,13 @@ footer ul li {
   display: block;
   object-position: 100% 0%;
   
+}
+
+.widget-1 header img:hover, 
+.widget-2 header img:hover,
+.widget-3 header img:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in;
 }
 
 .widget-1 section,

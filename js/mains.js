@@ -29,7 +29,6 @@ function getData() {
                             <li>Calificación: ${parseFloat((Math.random() * (5 - 3) + 3).toFixed(1))}</li>
                         </ul>
                     </section>
-                    <br/>
                 </div> `
             })
 
