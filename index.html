@@ -190,21 +190,16 @@
 
         <!-- Vuelve al comienzo  -->
 
-        <!-- Sección Footer  -->
+        <!--------------------------------- Sección Sidebar  ---------------------------------------------------->
       </main>
       <aside class="sidebar">
-        <input id="usuario" placeholder="Escribe 1 o 2 o 3" />
-        <button onclick="buscar()">buscar</button>
+        
 
+        <div id="output"></div>
+    
+        <script src="js/mains.js"></script>
         <!-- 3. crer la tabla en html -->
 
-        <table id="respuesta">
-          <thead>
-            <th>Id</th>
-            <th>Nombre de Usuario</th>
-          </thead>
-          <tbody id="respuesta_body"></tbody>
-        </table>
       </aside>
       <div class="widget-1">
         <header>
@@ -345,31 +340,4 @@
       </footer>
     </div>
   </body>
-  <script>
-    // 5. crear metodo buscar
-    function buscar() {
-      // 6. obtene el valor del <input id="usuario">
-      let usuario = $("#usuario").val();
-
-      $.ajax({
-        // 7. agrega el valor a la url
-        url: "https://jsonplaceholder.typicode.com/users/" + usuario,
-      }).done(function (data) {
-        // 8. construyes el <tr> con tus datos de respuesta
-        let tr =
-          "<tr>" +
-          "<td>" +
-          data.id +
-          "</td>" +
-          "<td>" +
-          data.email +
-          "</td>" +
-          "</tr>";
-        console.log(tr); // *opcional para ver en consola
-
-        // 9. usas append para agregar el tr al final
-        $("#respuesta_body").append(tr);
-      });
-    }
-  </script>
 </html>
