@@ -17,16 +17,19 @@ function getData() {
             //Get Data Loop Through
             usuarios.forEach(function (lists) {
                 output += `
-                <div class="container">
-                    <div class="card mt-4 bg-light">
-                        <ul class="list-group">
-                            <li class="list-group-item"><h2> ${lists.name.first}</h2></li>
-                            <li class="list-group-item"><img src="${lists.picture.large}"></li>
-                            <li class="list-group-item">Edad: ${lists.dob.age}</li>
-                            <li class="list-group-item">Pais: ${lists.location.country}</li>
-                            <li class="list-group-item">Calificación: ${parseFloat((Math.random() * (5 - 3) + 3).toFixed(1))}</li>
+                <div class="widget-4">
+                    <header>
+                        <img src="${lists.picture.large}" />
+                    </header>
+                    <section>
+                        <ul>
+                            <li><h2> ${lists.name.first}</h2></li>
+                            <li>Edad: ${lists.dob.age}</li>
+                            <li>Pais: ${lists.location.country}</li>
+                            <li>Calificación: ${parseFloat((Math.random() * (5 - 3) + 3).toFixed(1))}</li>
                         </ul>
-                    </div>
+                    </section>
+                    <br/>
                 </div> `
             })
 
