@@ -32,7 +32,7 @@ body {
   width: 100%;
 }
 .contenedor {
-  width: 90%;
+  width: 90vw;
   margin: 20px auto; /*auto permite centrar nuestra página en forma horizontal*/
   display: grid;
   gap: 20px; /*nos ahorramos tenes que poner márgenes entre los elementos*/
@@ -53,7 +53,7 @@ body {
 .contenedor .encabezado,
 .contenedor .sidebar,
 .contenedor .pie {
-  padding: 20;
+  padding: 2vw;
   border-radius: 0px;
 }
 
@@ -61,6 +61,7 @@ body {
 .contenedor .contenido {
   padding: 0;
   border-radius: 20px;
+  
 }
 
 .contenedor .encabezado {
@@ -72,7 +73,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  margin: auto;
+  margin: 0;
   width: 100%;
   height: 70px;
   float: none;
@@ -81,12 +82,12 @@ body {
 .contenedor .contenido {
   background: #fff;
   grid-area: contenido;
-  margin-top: 50px;
+  margin-top: 3rem;
 }
 
 .contenedor .sidebar {
 
-  margin-top: 50px;
+  margin-top: 1.5rem;
   /*utilizamos flexbox para alinear el contenido*/
 
   align-items: center;
@@ -342,7 +343,7 @@ footer ul li {
 .widget-2 p,
 .widget-3 p,
 .widget-4 p {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 .widget-1 ul li,
@@ -350,7 +351,7 @@ footer ul li {
 .widget-3 ul li {
   list-style: none;
   display: inline-block;
-  margin: 0.3em 0.2em;
+  margin: 0.2em 0.2em;
 }
 .widget-1 ul li a,
 .widget-2 ul li a,
@@ -363,12 +364,12 @@ footer ul li {
   line-height: 30px !important;
   border-radius: 50%;
   display: inline-block;
-  margin: 0.3em 0.2em;
+  margin: 0.2em 0.2em;
   transition: all 0.4s ease-in-out;
 }
 
 .mapa {
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .contenedorContacto {
@@ -459,8 +460,17 @@ footer ul li {
 .teGroup {
   border-radius: 0.3rem;
   padding: 0.35rem;
+  width:50%;
+  max-width:50%;
+  max-height:30%;
+  resize:vertical;
 }
-
+.teGNum{
+  width:50%;
+  max-width:50%;
+  max-height:30%;
+  text-align: center;
+}
 .inGroup {
   padding: 1rem;
 }
@@ -496,6 +506,20 @@ footer ul li {
   background-color: #3c8833;
   transition: background-color 0.15s ease-in;
 }
+@media screen and (max-width: 1080px) {
+  .contenedor {
+    grid-template-areas:
+      "encabezado encabezado encabezado encabezado"
+      "contenido contenido contenido contenido"
+      "widget-1 widget-1 widget-2 widget-2"
+      "widget-3 widget-3 widget-3 widget-3"
+      "sidebar sidebar sidebar sidebar"
+      "pie pie pie pie";
+  }
+  .CajaContacto {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .contenedor {
@@ -525,8 +549,9 @@ footer ul li {
       "pie pie pie";
   }
 }
+
 section {
-  padding: 1%;
+  padding: 1vw;
 }
 
 
@@ -589,4 +614,7 @@ section {
 .respmenu input:not(:checked) ~ .fa-bars {
   display: none;
 }
-
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
